@@ -59,8 +59,6 @@ def append_list(list_name, elem_url):
             pic_url_7.append(image_url)
         if list_name == 8:
             pic_url_8.append(image_url)
-        if list_name == 9:
-            pic_url_9.append(image_url)
 
 
 # loop for pagination and iterate every page in the pagination,
