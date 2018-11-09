@@ -37,7 +37,7 @@ def append_list(list_name, elem_url):
         # from image element extract url using cssutils
         style = cssutils.parseStyle(elem_url.get('style'))
         image_url = style['background-image']
-        # cleaning the url IMPORTANT: This is getting url with 128 by 128 change it to 400 by 400
+        # cleaning the url, todo-2: IMPORTANT: This is getting url with 128 by 128 change it to 400 by 400
         image_url = image_url.replace('url(', '').replace(')', '')
 
         # append in corresponding list

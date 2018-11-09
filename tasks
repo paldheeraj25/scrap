@@ -1,0 +1,24 @@
+1) start script for myntra shoe
+2) load the dome
+
+url structure for myntra shoe
+https://www.myntra.com/men-footwear
+
+
+https://www.myntra.com/men-footwear?f=Brand%3APuma%3A%3ACategories%3ASports%20Shoes
+
+https://www.flipkart.com/mens-footwear/sports-shoes/pr?sid=osp%2Ccil%2C1cu&p%5B%5D=facets.brand%255B%255D%3DPuma&otracker=categorytree&page=2
+https://www.flipkart.com/mens-footwear/sports-shoes/pr?sid=osp%2Ccil%2C1cu&p%5B%5D=facets.brand%255B%255D%3DPuma&otracker=categorytree&page=1
+
+1. create a loop with 1 to 1... initially hard code the loop
+  and get the data for initial 1 page
+
+  a) initially create loop with 2 iteration ...done
+  b) get the name ...done
+  c) to get the url create another soup object for store url ...done
+  d) get the shoe url ...done
+
+2. loop through all the pagination and get all product plus thier images in csv and create panda
+  dataframe
+
+3. get the data in the system form the dataframe.
