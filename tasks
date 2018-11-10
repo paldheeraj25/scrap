@@ -23,4 +23,9 @@ https://www.flipkart.com/mens-footwear/sports-shoes/pr?sid=osp%2Ccil%2C1cu&p%5B%
 
 3. get the data in the system form the dataframe.
 
-*****Nov 9 2018*******
+****** Nov 9 2018 *******
+1) Get the 40 shoe data on the given pagination...Done
+2) create panda Dataframe for them and craete csv ...Done
+3) Add url ...Done
+****** Nov 10 2018 ******
+1) Get all the shoe data in the csv

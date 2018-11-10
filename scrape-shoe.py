@@ -28,19 +28,18 @@ pic_url_5 = []
 pic_url_6 = []
 pic_url_7 = []
 pic_url_8 = []
+pic_url_9 = []
 
 # function: append url in the list
-
-
 def append_list(list_name, elem_url):
-    image_url = ''
+    image_url=''
     if elem_url is not None:
         # from image element extract url using cssutils
         style = cssutils.parseStyle(elem_url.get('style'))
         image_url = style['background-image']
         # cleaning the url IMPORTANT: This is getting url with 128 by 128 change it to 400 by 400
         image_url = image_url.replace('url(', '').replace(')', '')
-
+        
     # append in corresponding list
     if list_name == 0:
         pic_url_0.append(image_url)
@@ -63,23 +62,22 @@ def append_list(list_name, elem_url):
     if list_name == 9:
         pic_url_9.append(image_url)
 
-
 total_shoe_count = 1
-# loop for pagination and iterate every page in the pagination,
-for page in range(1, 3):  # todo-1: change the loop to 40
-    shoe_page_url = shoe_url + str(page)
-    # print(shoe_page_url)
-
+# loop for pagination and iterate every page in the pagination, 
+for page in range(1, 40):
+    shoe_page_url = shoe_url+ str(page)
+    #print(shoe_page_url)
+    
     # Get the dome for soup from url
     shoe_list_response = http.request('GET', shoe_page_url)
-
+    
     # create soup object from the fetched dome
     soup = BeautifulSoup(shoe_list_response.data, 'html.parser')
-
+    
     # get shoe names, contain in the element with class _2cLu-l
-    names = soup.find_all('a', class_='_2cLu-l')
-    # print(len(names))
-
+    names = soup.find_all('a', class_ = '_2cLu-l')
+    #print(len(names))
+    
     # shoe on given page counter
     page_shoe_count = 1
     # iterate on every shoe in the given page from the single pagination page
@@ -89,20 +87,19 @@ for page in range(1, 3):  # todo-1: change the loop to 40
 
         # get url for particular shoe store
         shoe_spec_url = flipkart+name.get('href')
-
+        
         # get shoe url
         shoe_name_url.append(shoe_spec_url)
-
+        
         # get the dome object for shoe store
         shoe_store_response = http.request('GET', shoe_spec_url)
-
+        
         # create soup  object for shoe store
-        shoe_store_soup = BeautifulSoup(
-            shoe_store_response.data, 'html.parser')
-
+        shoe_store_soup = BeautifulSoup(shoe_store_response.data, 'html.parser')
+        
         # from shoe store get all images from the link
         shoe_store_images = shoe_store_soup.find_all('div', class_='_2_AcLJ')
-
+        
         # storing different urls in lists
         for shoe_pic in range(0, 10):
             if shoe_pic in range(0, len(shoe_store_images)):
@@ -110,9 +107,10 @@ for page in range(1, 3):  # todo-1: change the loop to 40
             else:
                 append_list(shoe_pic, None)
         # break outer loop, To help with the pagination page debug
-        # break
-        print('iterating shoe {} on {} page of pagination, total shoe collected: {}'.format(
-            page_shoe_count, page, total_shoe_count))
-
-        page_shoe_count += 1
-        total_shoe_count += 1
+        #break
+        print('iterating shoe {} on {} page of pagination, total shoe collected: {}'.format(page_shoe_count, page, total_shoe_count))
+        
+        page_shoe_count +=1
+        total_shoe_count +=1
+                
+       
