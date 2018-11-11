@@ -28,4 +28,10 @@ https://www.flipkart.com/mens-footwear/sports-shoes/pr?sid=osp%2Ccil%2C1cu&p%5B%
 2) create panda Dataframe for them and craete csv ...Done
 3) Add url ...Done
 ****** Nov 10 2018 ******
-1) Get all the shoe data in the csv
+1) Get all the shoe data in the csv...Done
+2) Down the data in the system after creating studying vgg16
+3) Create vgg16 or your own model based on ease  model network using image augumentation
+****** Nov 11 2018 *******
+1) Download the initial line
+2) change the images to 256 by 256 before downloading
+3) 
