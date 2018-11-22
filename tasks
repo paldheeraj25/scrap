@@ -32,6 +32,20 @@ https://www.flipkart.com/mens-footwear/sports-shoes/pr?sid=osp%2Ccil%2C1cu&p%5B%
 2) Down the data in the system after creating studying vgg16
 3) Create vgg16 or your own model based on ease  model network using image augumentation
 ****** Nov 11 2018 *******
-1) Download the initial line
-2) change the images to 256 by 256 before downloading
-3) 
+1) Download the initial line...Done
+2) change the images to 256 by 256 before downloading...Done
+****** Nov 12 2018 *******
+1) load data in the kernel and show an image...Done
+2) creat the preprocessing function...Done
+3) find a way for convert the values in to_categorical and back and forth...Done
+****** Nov 13 2018 ********
+Fine tune is the way
+1) for ImageDataGenerator check how to convert to_categorical back to labels...Done
+2) fine tune a model with mobile net...Done
+3) create validation set with ImageDataGenerator as in the stack overflow...Done
+4) increase classes gradually to 10 to 100 and so on manupulating the layers back and forth..Done
+****** Nov 14 2018 *********
+1) more about batch_size from deep learning and other...Done
+2) what should be the batch_size in a general dl problem...Done
+3) deal with overfitting by including Dropout
+4) increase the layer to traininable
